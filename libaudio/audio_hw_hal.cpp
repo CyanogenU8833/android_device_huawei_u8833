@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "audio.primary.msm7627a==QIWU==HW_HAL=="
+#define LOG_TAG "audio.primary.msm7627a"
 //#define LOG_NDEBUG 0
 
 #include <stdint.h>
@@ -618,7 +618,7 @@ static int adev_open_input_stream(struct audio_hw_device *dev,
     if (!in)
         return -ENOMEM;
 
-    devices = convert_audio_device(devices, HAL_API_REV_2_0, HAL_API_REV_1_0);
+devices = convert_audio_device(devices, HAL_API_REV_2_0, HAL_API_REV_1_0);
     in->qcom_in = qadev->hwif->openInputStream(devices, (int *)&config->format,
                                     &config->channel_mask,
                                     &config->sample_rate,

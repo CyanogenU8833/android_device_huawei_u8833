@@ -1,9 +1,9 @@
 USE_CAMERA_STUB := false
 
 # inherit from the proprietary version
--include vendor/huawei/c8813/BoardConfigVendor.mk
+-include vendor/huawei/u8833/BoardConfigVendor.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/huawei/c8813/include
+TARGET_SPECIFIC_HEADER_PATH := device/huawei/u8833/include
 
 # Platform
 TARGET_NO_BOOTLOADER := true
@@ -29,8 +29,8 @@ ARCH_ARM_HAVE_32_BYTE_CACHE_LINES := true
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
-TARGET_BOOTLOADER_BOARD_NAME := c8813
-TARGET_OTA_ASSERT_DEVICE := c8813,hwc8813,C8813
+TARGET_BOOTLOADER_BOARD_NAME := u8833
+TARGET_OTA_ASSERT_DEVICE := c8813,hwc8813,C8813,U8833,HUAWEI Y300-0100
 
 BOARD_WANTS_EMMC_BOOT := true
 
@@ -50,8 +50,6 @@ TARGET_PROVIDES_LIBAUDIO := true
 # Camera
 BOARD_NEEDS_MEMORYHEAPPMEM := true
 
-BOARD_USES_QCOM_LIBS := true
-
 # GPS
 BOARD_USES_QCOM_LIBRPC := true
 BOARD_USES_QCOM_GPS := true
@@ -60,10 +58,10 @@ BOARD_VENDOR_QCOM_GPS_LOC_API_AMSS_VERSION := 50000
 
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/c8813/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/huawei/u8833/bluetooth
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/huawei/c8813/ril/
+BOARD_RIL_CLASS := ../../../device/huawei/u8833/ril/
 
 # OpenGL drivers config file path
 BOARD_EGL_CFG := device/huawei/c8813/prebuilt/system/lib/egl/egl.cfg
@@ -73,7 +71,7 @@ TARGET_USES_OVERLAY := true
 TARGET_HAVE_BYPASS  := false
 TARGET_USES_GENLOCK := true
 TARGET_QCOM_HDMI_OUT := false
-TARGET_USES_ION := true
+# TARGET_USES_ION := true
 TARGET_USES_QCOM_BSP := true
 TARGET_QCOM_DISPLAY_VARIANT := legacy
 COMMON_GLOBAL_CFLAGS += -DREFRESH_RATE=60
@@ -109,7 +107,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Kernel 
 TARGET_KERNEL_SOURCE := kernel/huawei/msm8x25
 TARGET_KERNEL_CONFIG := cm_msm8x25_defconfig
-TARGET_PREBUILT_KERNEL := device/huawei/c8813/kernel
+# TARGET_PREBUILT_KERNEL := device/huawei/c8813/kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=huawei loglevel=1
 BOARD_KERNEL_BASE := 0x00200000
 BOARD_PAGE_SIZE := 2048
@@ -123,8 +121,8 @@ BOARD_UMS_LUNFILE := "/sys/class/android_usb/android0/f_mass_storage/lun%d/file"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun%d/file
 
 # Recovery
-TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/c8813/recovery_kernel
-DEVICE_RESOLUTION := 480x854
+TARGET_PREBUILT_RECOVERY_KERNEL := device/huawei/u8833/recovery_kernel
+DEVICE_RESOLUTION := 480x800
 BOARD_USES_MMCUTILS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_HAS_NO_MISC_PARTITION := true

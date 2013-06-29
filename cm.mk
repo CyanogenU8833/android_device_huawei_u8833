@@ -1,26 +1,26 @@
 # Correct bootanimation size for the screen
-TARGET_BOOTANIMATION_NAME := vertical-480x854
+TARGET_BOOTANIMATION_NAME := vertical-480x800
 
 # Inherit device configuration
-$(call inherit-product, device/huawei/c8813/c8813.mk)
+$(call inherit-product, device/huawei/u8813/u8813.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
+$(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/cdma.mk)
+$(call inherit-product, vendor/cm/config/gsm.mk)
 
 # Setup device configuration
-PRODUCT_NAME := cm_c8813
-PRODUCT_DEVICE := c8813
+PRODUCT_NAME := cm_u8813
+PRODUCT_DEVICE := u8813
 PRODUCT_BRAND := Huawei
-PRODUCT_MODEL := HUAWEI C8813
+PRODUCT_MODEL := HUAWEI u8813
 PRODUCT_MANUFACTURER := Huawei
-PRODUCT_RELEASE_NAME := C8813
+PRODUCT_RELEASE_NAME := u8813
 
 #Set build fingerprint / ID / Product Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
-	PRODUCT_NAME=c8813 \
-	BUILD_FINGERPRINT=huawei/c8813:4.1.2/JZO54K/223160:userdebug/release \
-	PRIVATE_BUILD_DESC="huawei-user 4.1.2 JZO54K 223160 release" \
-	BUILD_NUMBER=223160
+	PRODUCT_NAME=u8813 \
+	BUILD_FINGERPRINT=Huawei/Y300-0100/hwY300-0100:4.1.1/HuaweiY300-0100/C00B175:user/ota-rel-keys,release-keys \
+	PRIVATE_BUILD_DESC="huawei-user 4.1.2 JZO54K C00B175 release" \
+	BUILD_NUMBER=C00B175
